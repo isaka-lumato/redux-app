@@ -1,13 +1,19 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function NavBar() {
-  const links = [
-    { id: 1, val: "books" },
-    { id: 2, val: "categories" },
-  ];
+function NavBar({ links }) {
   return (
     <div>
-      
+      <ul>
+        {links.map((linky) => (
+          <Link to={linky.route} key={linky.id}>
+            {' '}
+            <li key={linky.id}>{linky.val}</li>
+          </Link>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
+export default NavBar;
