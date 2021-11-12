@@ -14,11 +14,7 @@ function App() {
       <NavBar links={links} />
       <Routes>
         <Route path="/" element={<Books />} />
-        <Route
-          exact
-          path="/categories"
-          element={<Categories />}
-        />
+        <Route exact path="/categories" element={<Categories />} />
       </Routes>
     </Router>
   );
